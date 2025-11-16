@@ -1,6 +1,5 @@
 package com.example.todo.application.todo;
 
-import com.example.todo.application.member.provided.MemberFinder;
 import com.example.todo.application.todo.dto.TodoResponse;
 import com.example.todo.application.todo.dto.TodoSearchCondition;
 import com.example.todo.application.todo.provided.TodoFinder;
@@ -22,11 +21,6 @@ import java.time.temporal.ChronoUnit;
 @RequiredArgsConstructor
 public class TodoFinderService implements TodoFinder {
     private final TodoRepository todoRepository;
-
-    @Override
-    public Page<TodoResponse> getAllTodos(Pageable pageable) {
-        return searchTodos(new TodoSearchCondition(null, null, null), pageable);
-    }
 
     @Override
     public Page<TodoResponse> getMyAllTodos(Long memberId, Pageable pageable) {
