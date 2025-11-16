@@ -1,4 +1,4 @@
-package com.example.todo.domain.todo.dto;
+package com.example.todo.application.todo.dto;
 
 import com.example.todo.domain.todo.enumerate.TodoStatus;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -9,7 +9,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 public record TodoUpdateRequest(
-
         @Schema(description = "변경할 태그 목록 (null 이면 태그는 수정하지 않음)", example = "[\"공부\", \"운동\"]")
         @Size(max = 10, message = "태그는 최대 10개까지 가능합니다.")
         List<@Size(max = 30, message = "각 태그는 최대 30자까지 가능합니다.") String> tags,

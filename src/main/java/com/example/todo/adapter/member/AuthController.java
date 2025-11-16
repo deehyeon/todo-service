@@ -1,12 +1,12 @@
 package com.example.todo.adapter.member;
 
-import com.example.todo.adapter.member.dto.MemberLoginInfo;
-import com.example.todo.adapter.member.dto.RefreshTokenRequest;
+import com.example.todo.application.member.dto.MemberLoginInfo;
+import com.example.todo.application.member.dto.RefreshTokenRequest;
 import com.example.todo.application.member.provided.Auth;
 import com.example.todo.domain.global.apiPayload.response.ApiResponse;
-import com.example.todo.domain.member.dto.MemberLoginRequest;
-import com.example.todo.domain.member.dto.MemberSignupRequest;
-import com.example.todo.domain.member.dto.TokenResponse;
+import com.example.todo.application.member.dto.MemberLoginRequest;
+import com.example.todo.application.member.dto.MemberSignupRequest;
+import com.example.todo.application.member.dto.TokenResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;

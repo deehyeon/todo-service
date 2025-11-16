@@ -1,7 +1,5 @@
-package com.example.todo.domain.todo.dto;
+package com.example.todo.application.todo.dto;
 
-import com.example.todo.domain.member.Member;
-import com.example.todo.domain.todo.Todo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
