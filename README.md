@@ -17,7 +17,7 @@ Spring Boot 기반으로 구현되었으며, JWT 기반 인증/인가, 태그, �
 | ----------------------- | -------------------------------------------------------------------- |
 | **Backend**             | Spring Boot (Java 17+), Spring Web, Spring Security, Spring Data JPA |
 | **Database**            | PostgreSQL                                                           |
-| **Cache / Session**     | Redis (토큰 캐싱 및 주기적 관리)                                               |
+| **Cache**     | Redis (토큰 캐싱 및 주기적 관리)                                               |
 | **Authentication**      | JWT (Access Token / Refresh Token)                                   |
 | **API 문서화**             | Swagger / Springdoc-openapi                                          |
 | **Build & Tools**       | Gradle, Lombok                                                       |
