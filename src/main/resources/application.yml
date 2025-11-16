@@ -1,0 +1,40 @@
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/tododb
+    password: todo5082
+    username: todo
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+
+jwt:
+  secret: 09b7c403a7ab98562b404af0fe0803ba8ba1cb7e6912eab8effd622e82b2e2607a9a35a7f1ed57b88f1f408931e655180130d98bf90216ea9e263c3d3e4acbe8
+  prefix: bearer
+  header: Authorization
+  token:
+    access-expiration-time: 3600000    # 1??
+    refresh-expiration-time: 604800000   # 7?
+
+cors:
+  origin:
+    development: http://localhost:3000
+
+todo:
+  admin-policy: MANAGE_ALL
+  admin:
+    name: admin
+    email: admin@todo.com
+    password: admin1234
