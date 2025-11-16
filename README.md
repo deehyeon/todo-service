@@ -64,6 +64,38 @@ todo:
 - Redis에서 Refresh Token 캐싱
 - Spring Security를 활용한 인증 처리
 
+
+### 🧱 프로젝트 구조 & 헥사고날 아키텍처
+
+본 프로젝트는 Hexagonal Architecture (Ports & Adapters Architecture) 를 기반으로 설계되었습니다.
+비즈니스 규칙이 위치한 Domain을 중심으로, Application 서비스와 Adapter를 계층적으로 분리하여
+확장성과 유지보수성을 고려한 구조를 지향합니다.
+
+                        +-------------------------+
+                        |      WEB / SECURITY     |
+                        |    (Controllers, JWT)   |
+                        +-----------▲-------------+
+                                    |
+                                    | Adapter Layer
+                                    |
+                     +--------------┴---------------+
+                     |       Application Layer       |
+                     |  (UseCase, Services, DTO)     |
+                     +--------------▲---------------+
+                                    |
+                                    | Domain 객체 조작
+                                    |
+                      +-------------┴-------------+
+                      |        Domain Layer        |
+                      |  (Entity, VO, Rule)        |
+                      +----------------------------+
+
+📌 DTO 배치를 Application 레이어로 통합함으로써 얻은 이점
+- Domain의 순수성 보존 (HTTP/JSON/Swagger와 전혀 무관)
+- Application을 중심으로 Web Adapter와 유스케이스의 관계가 단순해짐
+- DTO 중복 제거 → 유지보수 부담 감소
+
+
 ---
 ### 👨‍💻 Developer
 Jihyeon An (안지현)
