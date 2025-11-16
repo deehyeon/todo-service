@@ -1,4 +1,4 @@
-package com.example.todo.adapter.member.dto;
+package com.example.todo.application.member.dto;
 
 import jakarta.validation.constraints.NotBlank;
 

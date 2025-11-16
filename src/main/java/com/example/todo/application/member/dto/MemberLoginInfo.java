@@ -1,6 +1,4 @@
-package com.example.todo.adapter.member.dto;
-
-import com.example.todo.domain.member.dto.TokenInfo;
+package com.example.todo.application.member.dto;
 
 public record MemberLoginInfo(
         TokenInfo tokenInfo,

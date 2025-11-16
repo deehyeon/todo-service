@@ -1,7 +1,5 @@
 package com.example.todo.application.todo.dto;
 
-import com.example.todo.domain.member.Member;
-import com.example.todo.domain.member.dto.TokenResponse;
 import com.example.todo.domain.todo.Todo;
 import com.example.todo.domain.todo.enumerate.TodoStatus;
 

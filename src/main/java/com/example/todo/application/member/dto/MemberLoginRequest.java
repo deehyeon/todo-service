@@ -1,15 +1,10 @@
-package com.example.todo.domain.member.dto;
+package com.example.todo.application.member.dto;
 
-import com.example.todo.domain.member.enumerate.MemberRole;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
-public record MemberSignupRequest (
-        @Schema(description = "이름", example = "윤도운")
-        @NotBlank(message = "이름은 필수입니다.")
-        String name,
-
+public record MemberLoginRequest(
         @Schema(description = "이메일", example = "test@test.com")
         @NotBlank(message = "이메일은 필수입니다.")
         String email,
@@ -21,4 +16,8 @@ public record MemberSignupRequest (
         )
         @NotBlank(message = "비밀번호는 필수입니다.")
         String password
-) {}
+) {
+    public static MemberLoginRequest of(String email, String password) {
+        return new MemberLoginRequest(email, password);
+    }
+}

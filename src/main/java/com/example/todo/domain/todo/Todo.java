@@ -11,7 +11,6 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,13 +63,6 @@ public class Todo extends AbstractEntity {
             return;
         }
         this.tags.addAll(tags);
-    }
-
-    public void removeTags(List<String> tags) {
-        if (tags == null || tags.isEmpty()) {
-            return;
-        }
-        this.tags.removeAll(tags);
     }
 
     public void modifyEndAt(LocalDate endAt) {
